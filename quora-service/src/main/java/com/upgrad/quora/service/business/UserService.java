@@ -37,4 +37,26 @@ public class UserService {
         return adminService.logoutUser(authorizationToken);
     }
 
+    @Transactional(propagation = Propagation.REQUIRED)
+    public UserEntity getUser(final String userId, final String authorization) throws AuthorizationFailedException, UserNotFoundException {
+        UserAuthEntity userAuthEntity = userDao.getUserAuthToken(authorization);
+
+        // Validate if user is signed in or not
+        if (userAuthEntity == null) {
+            throw new AuthorizationFailedException("ATHR-001", "User has not signed in");
+        }
+
+        // Validate if user has signed out
+        if (userAuthEntity.getLogoutAt() != null) {
+            throw new AuthorizationFailedException("ATHR-002", "User is signed out.Sign in first to get user details");
+        }
+
+        // Validate if requested user exist or not
+        UserEntity userEntity = userDao.getUserByUuid(userId);
+        if (userEntity == null) {
+            throw new UserNotFoundException("USR-001", "User with entered uuid does not exist");
+        }
+
+        return userEntity;
+    }
 }
