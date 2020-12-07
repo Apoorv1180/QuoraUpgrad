@@ -1,4 +1,4 @@
-package com.upgrad.quora.api.Controller;
+package com.upgrad.quora.api.controller;
 
 import com.upgrad.quora.api.model.*;
 import com.upgrad.quora.service.business.AnswerService;
