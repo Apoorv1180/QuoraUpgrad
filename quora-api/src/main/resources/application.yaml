@@ -4,7 +4,6 @@ server:
     contextPath: /api
 
 spring:
-
   application:
     name: Quora-api
 

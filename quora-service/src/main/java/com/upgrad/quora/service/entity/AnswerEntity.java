@@ -41,6 +41,7 @@ public class AnswerEntity {
 
     @ManyToOne
     @JoinColumn(name = "question_id")
+    @OnDelete(action = OnDeleteAction.CASCADE)
     private QuestionEntity question;
 
     public long getId() {

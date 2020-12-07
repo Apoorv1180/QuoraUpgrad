@@ -1,5 +1,4 @@
-package com.upgrad.quora.api.controller;
-
+package com.upgrad.quora.api.Controller;
 
 import com.upgrad.quora.api.model.UserDeleteResponse;
 import com.upgrad.quora.service.business.AdminService;
