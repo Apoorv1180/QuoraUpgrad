@@ -26,6 +26,10 @@
                 <directory>src/main/resources</directory>
                 <filtering>true</filtering>
             </resource>
+            <resource>
+                <directory>src/main/resources/sql</directory>
+                <filtering>true</filtering>
+            </resource>
         </resources>
 
         <plugins>
