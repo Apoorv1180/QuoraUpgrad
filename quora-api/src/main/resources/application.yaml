@@ -6,13 +6,13 @@ server:
 spring:
 
   application:
-    name:
+    name: Quora-api
 
   datasource:
     driverClassName: org.postgresql.Driver
     url: jdbc:postgresql://localhost:5432/quora
     username: postgres
-    password: password
+    password: joy@123
 
   jpa:
     properties:
