@@ -1,4 +1,5 @@
-package com.upgrad.quora.api.controller;
+
+package com.upgrad.quora.api.Controller;
 
 
 import com.upgrad.quora.api.model.UserDetailsResponse;
