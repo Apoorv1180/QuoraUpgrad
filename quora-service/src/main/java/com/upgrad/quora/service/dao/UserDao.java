@@ -71,6 +71,10 @@ public class UserDao {
         }
     }
 
+    public void deleteUser(String uuid) {
+        UserEntity userEntity = getUserByUuid(uuid);
+        entityManager.remove(userEntity);
+    }
 
     public UserAuthEntity createAuthToken(final UserAuthEntity userAuthEntity) {
         entityManager.persist(userAuthEntity);
