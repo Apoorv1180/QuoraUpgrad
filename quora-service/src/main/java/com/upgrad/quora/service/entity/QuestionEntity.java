@@ -80,4 +80,6 @@ public class QuestionEntity implements Serializable {
     public void setUser(UserEntity user) {
         this.user = user;
     }
+
 }
+
