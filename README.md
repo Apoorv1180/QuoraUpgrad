@@ -8,6 +8,7 @@
 3. Modify the database password in following files
    * quora-api\src\main\resources\application.yaml 
    * quora-db\src\main\resources\config\localhost.properties
+4. While authenticating the user use the format "Basic base64encoded(username:password)"
    
 # Contributors
 
