@@ -19,6 +19,13 @@ public class CommonController {
     @Autowired
     private UserService userService;
 
+    /**
+     * @param userId user id of signed in user
+     * @param authorization authorization token as requesr header
+     * @return
+     * @throws AuthorizationFailedException posible exception handling
+     * @throws UserNotFoundException null user found exception handled
+     */
     @RequestMapping(method = RequestMethod.GET, path = "/userprofile/{userId}", produces = MediaType.APPLICATION_JSON_UTF8_VALUE)
     public ResponseEntity<UserDetailsResponse> userProfile(@PathVariable("userId") final String userId, @RequestHeader("authorization") final String authorization) throws AuthorizationFailedException, UserNotFoundException {
 
