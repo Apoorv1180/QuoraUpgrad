@@ -1,6 +1,4 @@
-
 package com.upgrad.quora.api.Controller;
-
 
 import com.upgrad.quora.api.model.*;
 import com.upgrad.quora.service.business.QuestionService;
@@ -146,6 +144,4 @@ public class QuestionController {
         // Return response
         return new ResponseEntity<List<QuestionDetailsResponse>>(allQuestionDetailsResponse, HttpStatus.FOUND);
     }
-
 }
-

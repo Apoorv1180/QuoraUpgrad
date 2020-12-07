@@ -1,6 +1,4 @@
-
 package com.upgrad.quora.api.Controller;
-
 
 import com.upg3rad.quora.api.model.SigninResponse;
 import com.upgrad.quora.api.model.SignoutResponse;
@@ -61,9 +59,7 @@ public class UserController {
         userEntity.setCountry(signupUserRequest.getCountry());
         userEntity.setAboutMe(signupUserRequest.getAboutMe());
         userEntity.setDob(signupUserRequest.getDob());
-
         userEntity.setRole("nonadmin");
-      
         userEntity.setContactNumber(signupUserRequest.getContactNumber());
 
         // Return response with created user entity
