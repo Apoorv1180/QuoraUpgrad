@@ -1,4 +1,4 @@
-package com.upgrad.quora.api.Controller;
+package com.upgrad.quora.api.controller;
 
 import com.upg3rad.quora.api.model.SigninResponse;
 import com.upgrad.quora.api.model.SignoutResponse;
